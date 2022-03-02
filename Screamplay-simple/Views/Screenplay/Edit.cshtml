@@ -1,0 +1,45 @@
+﻿@model Screenplay
+
+<h1>@ViewData["Title"]</h1>
+<p>@ViewData["Subtitle"]</p>
+
+<!--
+    aside with characters and locations lists.
+    TODO: make them appear in modals
+-->
+<aside>
+    <div id="character-list">
+        <h2>Characters list</h2>
+        <ul class="aside-list">
+            @foreach(var character in ViewBag.Characters)
+            {
+                <li>
+                    <a asp-action="Detail" asp-controller="Character" asp-route-id="@character.Id" target="_blank">@character.Name</a>
+                    </li>
+            }
+        </ul>
+    </div>
+    <div id="location-list">
+        <h2>Locations list</h2>
+        <ul class="aside-list">
+            @foreach(var location in ViewBag.Locations)
+            {
+                <li><a asp-action="Detail" asp-controller="Location" target="_blank">@location.Name</a></li>
+            }
+        </ul>
+    </div>
+</aside>
+<section id="screenplay-editor">
+    <div id="screenplay-editor-window">
+        <!--
+        For now, a form
+        TODO: make a WYSIWYG editor
+        -->
+        <div asp-validation-summary="All"></div>
+        <form method="post" class="add-form">
+            <textarea asp-for="Content">@Model.Content</textarea>
+            <input type="submit" value="Save"/>
+        </form>
+    </div>
+</section>
+@*<partial name="_DetailModalPartial" />*@

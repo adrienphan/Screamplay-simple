@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screamplay-simple", "Screamplay-simple\Screamplay-simple.csproj", "{4503A43B-CE53-44AA-9B9F-36F16A706914}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4503A43B-CE53-44AA-9B9F-36F16A706914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4503A43B-CE53-44AA-9B9F-36F16A706914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4503A43B-CE53-44AA-9B9F-36F16A706914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4503A43B-CE53-44AA-9B9F-36F16A706914}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6B52BE8-0D09-484C-9425-D2C0F3739733}
+	EndGlobalSection
+EndGlobal

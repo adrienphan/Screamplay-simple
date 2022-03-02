@@ -1,0 +1,31 @@
+﻿@using Screamplay_simple.Controllers;
+@model Character
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert">@TempData["Success"]</div>
+
+<div asp-validation-summary="All" style="color: red; list-style: none;"></div>
+<form method="post" class="add-form">
+    <div class="add-form-field">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="add-form-field">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div class="add-form-field">
+        <label asp-for="IdScreenplay"></label>
+        <select asp-for="IdScreenplay" class="form-control">
+            @foreach( var screenplay in ViewBag.Screenplays)
+            {
+                <option value="@screenplay.Id">@screenplay.Title</option>
+            }
+        </select>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Create"/>
+    <a asp-controller="Character" asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
